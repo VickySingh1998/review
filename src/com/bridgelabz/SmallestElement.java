@@ -15,7 +15,7 @@ public class SmallestElement {
         for(int i=0; i<size; i++) {
             numbers[i] = sc.nextInt();
         }
-        int min = numbers[0];
+        int min = Integer.MAX_VALUE;
 
         for(int i=0; i<numbers.length; i++) {
             if(numbers[i] < min) {
