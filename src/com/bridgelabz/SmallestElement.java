@@ -1,17 +1,27 @@
 package com.bridgelabz;
 
 import javax.naming.PartialResultException;
+import java.util.Scanner;
 
 public class SmallestElement {
     public static void main(String[] args) {
-        int number[] = {45, 22, 32, 10, 23, 43, 78};
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter The Size Of Array : ");
+        int size = sc.nextInt();
+        int numbers[] = new int[size];
+        System.out.println("Enter the numbers :- ");
 
-        int small = number[0];
-
-        for (int i = 0; i < number.length; i++) {
-            if (number[i] < small)
-                small = number[i];
+        //input
+        for(int i=0; i<size; i++) {
+            numbers[i] = sc.nextInt();
         }
-        System.out.println("Smallest element present is = " + small);
+        int min = numbers[0];
+
+        for(int i=0; i<numbers.length; i++) {
+            if(numbers[i] < min) {
+                min = numbers[i];
+            }
+        }
+        System.out.println("Smallest number is : " + min);
     }
 }
